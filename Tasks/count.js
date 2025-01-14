@@ -1,18 +1,18 @@
 // Refactor following solution
 // Sum all number values in dict
 
-// step 4: replace forEach wit for of loop
+// step 5: rename function and variables
 
 'use strict';
 
-const count = (obj) => {
-  let sum = 0;
+const sumNumberValues = (obj) => {
+  let totalSum = 0;
   const keys = Object.keys(obj);
-  for (const key of keys) {
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+  for (const element of keys) {
+    const value = obj[element];
+    if (typeof value === 'number') totalSum += value;
  }
-  return sum;
+  return totalSum;
 };
 
-module.exports = count;
+module.exports = sumNumberValues;
