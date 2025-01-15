@@ -1,19 +1,15 @@
 // Refactor following solution
 // Get day number
 
-// step 2: add const, fix naming, initialize i directly in the loop
+// step 3: replace for loop with findIndex
 
 'use strict';
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 const getDayNumber = (input) => {
-  for (let i = 0; i < DAYS.length; i++) {
-    if (input.startsWith(DAYS[i].toLowerCase())) {
-      return i + 1;
-    }
-  }
-  return -1;
+const index = DAYS.findIndex((day) => input.startsWith(day.toLowerCase()));
+  return index === -1 ? -1 : index + 1;
 };
 
 module.exports = getDayNumber;
