@@ -1,11 +1,11 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-//step 1: add 'use strict'
+// step 2: remove default parameter in function
 
 'use strict';
 
-const k = (sum = function (s = () => {}) {
+const k = (sum) {
   sum = [0];
   let k = 5;
   for (i of s) {
