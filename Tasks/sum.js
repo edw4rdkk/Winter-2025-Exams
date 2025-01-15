@@ -1,12 +1,11 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-// step 5: use reduce method instead of for loop,
-// change parameter name for better understanding
+// step 6: fix naming
 
 'use strict';
 
-const k = (array) => {
+const sumAllNumbers = (array) => {
   const totalSum = array.reduce((acc, num) => {
     if (typeof num === 'number') {
       return acc + num;
@@ -16,4 +15,4 @@ const k = (array) => {
   return totalSum;
 };
 
-module.exports = k;
+module.exports = sumAllNumbers;
