@@ -1,18 +1,19 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-// step 4: remove unnecessary lines and just return final sum
+// step 5: use reduce method instead of for loop,
+// change parameter name for better understanding
 
 'use strict';
 
-const k = (sum) => {
-  let sum = [0];
-  for (let i of s) {
-    if (typeof i === 'number') {
-        sum.push(sum[sum.length - 1] + i);  
-      }
+const k = (array) => {
+  const totalSum = array.reduce((acc, num) => {
+    if (typeof num === 'number') {
+      return acc + num;
     }
-  return sum[sum.length - 1];
+    return acc;
+  }, 0);
+  return totalSum;
 };
 
-module.exports = sum;
+module.exports = k;
