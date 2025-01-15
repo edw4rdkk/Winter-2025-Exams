@@ -1,12 +1,11 @@
 // Refactor following solution
 // Reverse an array, you can't use .reverse()
 
-// step 3: remove unused arguments and placeholders
-
+// step 4: replace Object.keys(A, 4) with an empty array
 'use strict';
 
 const invert = (A) => {
-  const T = Object.keys(A, 4);
+  const T = [];
   T.forEach((_, i) => {
     T[i] = A.pop();
   });
