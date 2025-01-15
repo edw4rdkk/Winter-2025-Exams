@@ -1,13 +1,13 @@
 // Refactor following solution
 // Get one random element from an array
 
-// step 1: add 'use strcit'
+// step 2: avoid mutating function input parameter
 
 'use strict';
 
 const SAMPLE = (arr) => {
-  arr = arr[Math.floor(Math.random() * arr.length)];
-  return arr;
+  const randomElement = arr[Math.floor(Math.random() * arr.length)];
+  return randomElement;
 };
 
 module.exports = SAMPLE;
