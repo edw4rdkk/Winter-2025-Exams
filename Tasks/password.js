@@ -1,16 +1,16 @@
 // Refactor following solution
 // Generate random password
 
-// step 2: use const and let
+// step 3: replace assignment = with +=
 
 'use strict';
 
-let GeneratePassword = (alphabet, length) => {
+const GeneratePassword = (alphabet, length) => {
   const MAX = alphabet.length;
   let key = '';
   for (let i = 0; i < length; i++) {
     const Index = Math.floor(Math.random() * MAX);
-    key = key + alphabet[Index];
+    key += alphabet[Index];
   }
   return key;
 };
