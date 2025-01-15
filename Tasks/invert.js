@@ -1,15 +1,15 @@
 // Refactor following solution
 // Reverse an array, you can't use .reverse()
 
-// step 5: replace forEach with for loop
+// step 6: fix naming for better understanding
 'use strict';
 
-const invert = (A) => {
-  const T = [];
-  for (let i = A.length - 1; i >= 0; i--) {
-    T.push(A[i]);
+const reverseArray = (array) => {
+  const result = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    result.push(array[i]);
   }
-  return T;
+  return result;
 };
 
-module.exports = invert;
+module.exports = reverseArray;
